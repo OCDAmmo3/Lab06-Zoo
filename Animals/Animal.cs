@@ -6,6 +6,10 @@ namespace Animals
 {
     abstract class Animal
     {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
         public string Eat { get; set; }
 
         public virtual void Sleep()
