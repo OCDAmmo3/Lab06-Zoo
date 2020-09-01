@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Animals
 {
-    abstract class Mammal : Animal
+    public abstract class Mammal : Animal
     {
         public bool HasHair { get; set; }
 
@@ -20,13 +20,17 @@ namespace Animals
         }
     }
 
-    class GrizzlyBear : Mammal
+    public class GrizzlyBear : Animal, IMammal
     {
         public override void Sleep()
         {
             base.Sleep();
             Console.WriteLine("I also hybernate for a good chunk of the year as well.");
         }
+
+        public bool HasHair => true;
+
+        public string DrinksMilk => "45 oz per day";
 
         public override string Name => "Grizzly Bear";
 
@@ -36,7 +40,7 @@ namespace Animals
         public override string Home => "Cave";
     }
 
-    class BlueWhale : Mammal
+    public class BlueWhale : Animal, IMammal
     {
         public override void Sleep()
         {
@@ -44,6 +48,10 @@ namespace Animals
             Console.WriteLine("I can sleep while moving or not moving.");
             Console.WriteLine("Sometimes I even sleep straight up and down.");
         }
+
+        public bool HasHair => true;
+
+        public string DrinksMilk => "150 liters per day";
 
         public override string Name => "Blue Whale";
 
@@ -53,12 +61,16 @@ namespace Animals
         public override string Home => "Ocean";
     }
 
-    class Lion : Mammal
+    public class Lion : Animal, IMammal
     {
         public override void Sleep()
         {
             base.Sleep();
         }
+
+        public bool HasHair => true;
+
+        public string DrinksMilk => "200ml a day";
 
         public override string Name => "Lion";
 

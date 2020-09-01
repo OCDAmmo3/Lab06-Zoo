@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Animals
 {
-    abstract class Fish : Animal
+    public abstract class Fish : Animal
     {
         public bool HasGills { get; set; }
 
@@ -20,13 +20,17 @@ namespace Animals
         }
     }
 
-    class ClownFish : Fish
+    public class ClownFish : Animal, IFish
     {
         public override void Sleep()
         {
             base.Sleep();
             Console.WriteLine("I sleep in an anenome, and it is actively awake while I'm sleeping.");
         }
+
+        public bool HasGills => true;
+
+        public bool LivesInOcean => true;
 
         public override string Name => "Clown Fish";
 
@@ -36,7 +40,7 @@ namespace Animals
         public override string Home => "Anemone";
     }
 
-    class GreatWhiteShark : Fish
+    public class GreatWhiteShark : Animal, IFish
     {
         public override void Sleep()
         {
@@ -44,6 +48,9 @@ namespace Animals
             Console.WriteLine("Because I have to keep swimming at all times (or die)");
             Console.WriteLine("I just take naps often periodically through the day while I can drift forward.");
         }
+        public bool HasGills => true;
+
+        public bool LivesInOcean => true;
 
         public override string Name => "Great White Shark";
 
