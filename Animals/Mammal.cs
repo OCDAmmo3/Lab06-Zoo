@@ -10,10 +10,6 @@ namespace Animals
 
         public bool DrinksMilk { get; set; }
 
-        public abstract bool Omnivore { get; }
-
-        public bool Carnivore => !Omnivore;
-
         public override string Sound { get; }
 
         public override string Home { get; }
@@ -32,6 +28,8 @@ namespace Animals
             Console.WriteLine("I also hybernate for a good chunk of the year as well.");
         }
 
+        public override string Name => "Grizzly Bear";
+
         public override bool Omnivore => true;
 
         public override string Sound => "Roar";
@@ -47,6 +45,8 @@ namespace Animals
             Console.WriteLine("Sometimes I even sleep straight up and down.");
         }
 
+        public override string Name => "Blue Whale";
+
         public override bool Omnivore => false;
 
         public override string Sound => "Groan";
@@ -59,6 +59,8 @@ namespace Animals
         {
             base.Sleep();
         }
+
+        public override string Name => "Lion";
 
         public override bool Omnivore => false;
 
