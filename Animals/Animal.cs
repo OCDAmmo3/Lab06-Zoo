@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Animals
 {
-    abstract class Animal
+    public abstract class Animal
     {
         public static void Main(string[] args)
         {
