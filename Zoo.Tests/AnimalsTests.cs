@@ -72,5 +72,55 @@ namespace ZooTests
             Assert.Equal("Great White Shark", shark.Name);
             Assert.Equal("Ocean", shark.Home);
         }
+
+        [Fact]
+        public void GrizzlyBear_is_an_animal_and_a_mammal()
+        {
+            // Arrange
+            GrizzlyBear bear = new GrizzlyBear();
+
+            // Assert
+            Assert.True(bear is Animal);
+        }
+
+        [Fact]
+        public void Lion_is_an_animal_and_a_mammal()
+        {
+            // Arrange
+            Lion lion = new Lion();
+
+            // Assert
+            Assert.True(lion is Animal);
+        }
+
+        [Fact]
+        public void BlueWhale_is_an_animal_and_a_mammal()
+        {
+            // Arrange
+            BlueWhale whale = new BlueWhale();
+
+            // Assert
+            Assert.True(whale is Animal);
+        }
+
+        [Fact]
+        public void ClownFish_is_an_animal_and_a_fish()
+        {
+            // Arrange
+            ClownFish clown = new ClownFish();
+
+            // Assert
+            Assert.True(clown is Animal);
+        }
+
+        [Fact]
+        public void GreatWhiteShark_is_an_animal_and_a_fish()
+        {
+            // Arrange
+            GreatWhiteShark shark = new GreatWhiteShark();
+
+            // Assert
+            Assert.True(shark is Animal);
+        }
     }
 }
